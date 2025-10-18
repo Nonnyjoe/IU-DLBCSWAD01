@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML document setup and meta tags for responsiveness and compatibility -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Book Store</title>
+    <!-- Import Font Awesome for icon usage throughout the site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+<!-- 
+    Header Section:
+    Contains the site logo and the main navigation bar for easy access to different sections.
+-->
+<header class="header">
+    <div class="header-1">
+        <!-- Logo with book icon and site name -->
+        <a href="#" class="logo"> <i class="fas fa-book"></i> Sample Books </a>
+    </div>
+    <br>
+    <div class="header-2">
+        <!-- Navigation bar with links to main sections of the site -->
+        <nav class="bottom-navbar">
+            <ul style="display: flex; flex-direction: row; gap: 20px; list-style: none; padding: 0; margin: 0;"></ul>
+                <li><a href="#home" class="fas fa-home"> Home</a></li>
+                <li><a href="#featured" class="fas fa-list">Featured</a></li>
+                <li><a href="#arrivals" class="fas fa-tags">arrivals</a></li>
+                <li><a href="#reviews" class="fas fa-comments">reviews</a></li>
+                <li><a href="#blogs" class="fas fa-blog">blogs</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<br/>
+
+<!-- 
+    Home Section:
+    Highlights the main promotional offer and encourages users to shop.
+-->
+<section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <!-- Promotional headline and description -->
+            <h3>upto 75% off</h3>
+            <p>Exciting offer! Enjoy a massive 75% discount and free delivery on every book purchased from our website. Dont miss out, shop your favorite books today!</p>
+            <!-- Call to action button for shopping -->
+            <a href="#" class="btn">shop now</a>
+        </div>
+    </div>
+</section>
+
+<br/> <br/>
+
+<!-- 
+    Icons Section:
+    Displays key service features such as free shipping, secure payment, easy returns, and 24/7 support.
+-->
+<section class="icons-container">
+    <div class="icons">
+        <i class="fas fa-shipping-fast"></i>
+        <div class="content">
+            <h3>free shipping</h3>
+            <p>order over $100</p>
+        </div>
+    </div>
+    <div class="icons">
+        <i class="fas fa-lock"></i>
+        <div class="content">
+            <h3>secure payment</h3>
+            <p>100 secure payment</p>
+        </div>
+    </div>
+    <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+            <h3>easy returns</h3>
+            <p>10 days returns</p>
+        </div>
+    </div>
+    <div class="icons">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+            <h3>24/7 support</h3>
+            <p>call us anytime</p>
+        </div>
+    </div>
+</section>
+
+<br/> <br/>
+
+<!-- 
+    Featured Books Section:
+    Showcases selected books with images, prices, and options to add to cart or view details.
+-->
+<section class="featured" id="featured">
+    <h1 class="heading"> <span>featured books</span> </h1>
+    <div class="featured-books">
+        <!-- Each box represents a featured book with actions and details -->
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://images3.penguinrandomhouse.com/cover/9780345806789" alt="The Shining image">
+            </div>
+            <div class="content">
+                <h3>The Shining</h3>
+                <div class="price">$19.99</div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://images4.penguinrandomhouse.com/cover/9798217187294" alt="Willing prey image">
+            </div>
+            <div class="content">
+                <h3>Willing Prey</h3>
+                <div class="price">$15.99 </div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://images4.penguinrandomhouse.com/cover/9780593243756" alt="Hello Beautiful image">
+            </div>
+            <div class="content">
+                <h3>Hello Beautiful</h3>
+                <div class="price">$19.99 </div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="https://images1.penguinrandomhouse.com/cover/9780593488362" alt="Moonstorm image">
+            </div>
+            <div class="content">
+                <h3>Moonstorm</h3>
+                <div class="price">$20.99</div>
+                <a href="#" class="btn">add to cart</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br/> <br/>
+
+<!-- 
+    Newsletter Section:
+    Provides a form for users to subscribe to email updates about new books and offers.
+-->
+<section class="newsletter">
+    <form action="">
+        <h3>subscribe for latest updates</h3>
+        <input type="email" name="" placeholder="enter your email" id="" class="box">
+        <input type="submit" value="subscribe" class="btn">
+    </form>
+</section>
+
+<br/> <br/>
+
+<!-- 
+    Arrivals Section:
+    Displays the latest books added to the store, each with image, price, rating, and add to cart option.
+-->
+<section class="arrivals" id="arrivals">
+    <h1 class="heading"> <span>new arrivals</span> </h1>
+    <div class="arrivals-books">
+        <!-- Each box represents a new arrival with details and rating -->
+        <div class="box">
+            <div class="image">
+                <img src="https://images1.penguinrandomhouse.com/cover/9780307700155" alt="Loneliness of Sonia and Sunny image">
+            </div>
+            <div class="content">
+                <h3>Loneliness of Sonia and Sunny</h3>
+                <div class="price">$15.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://images3.penguinrandomhouse.com/cover/9781101965887" alt="A Knight of the seven kingdoms image">
+            </div>
+            <div class="content">
+                <h3>A Knight of the seven kingdoms</h3>
+                <div class="price">$17.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://images1.penguinrandomhouse.com/cover/9798217191086" alt="People we meet on Vacation image">
+            </div>
+            <div class="content">
+                <h3>People we meet on Vacation</h3>
+                <div class="price">$20.99 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://images3.penguinrandomhouse.com/cover/9780812980950" alt="Then Again Image">
+            </div>
+            <div class="content">
+                <h3>Then Again</h3>
+                <div class="price">$15.99 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <a href="#" class="btn">Add to Cart</a>
+        </div>
+    </div>
+</section>
+
+<br/> <br/>
+
+<!-- 
+    Deal Section:
+    Highlights a special limited-time offer to encourage purchases during weekends.
+-->
+<section class="deal">
+    <div class="content">
+        <h3>deal of the day</h3>
+        <h1>upto 50% off</h1>
+        <p>Good news for you, if you buy any book on Saturday and Sunday you will get 50% off and also you will get free delivery.</p>
+        <a href="#" class="btn">shop now</a>
+    </div>
+</section>
+
+<!-- 
+    Reviews Section:
+    Displays customer feedback and ratings to build trust and credibility.
+-->
+<section class="reviews" id="reviews">
+    <h1 class="heading"> <span>client's reviews</span> </h1>
+    <div class="reviews-list">
+        <!-- Each box contains a user review, image, and star rating -->
+        <div class="box">
+            <img src="https://www.freepik.com/premium-vector/man-avatar-drawing-vector_89802169.htm" alt="user image icon">
+            <h3>john</h3>
+            <p>I found the perfect book for my studies here. The delivery was quick and the customer service was very helpful. Highly recommended!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://drive.google.com/file/d/1UpcYVHtmaxyOfG7Iq5d-7xC-MfI26XNO/view?usp=sharing" alt="user image icon">
+            <h3>Joy</h3>
+            <p>Shopping here was a breeze! The website is user-friendly and I received my order in perfect condition. Will shop again!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://www.freepik.com/premium-vector/man-avatar-drawing-vector_89802169.htm" alt="user image icon">
+            <h3>Bob</h3>
+            <p>Excellent service and a wide variety of books. I appreciate the regular updates and the fast shipping. Thank you!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://drive.google.com/file/d/1UpcYVHtmaxyOfG7Iq5d-7xC-MfI26XNO/view?usp=sharing" alt="user image icon">
+            <h3>Ava</h3>
+            <p>Very satisfied with my purchase! The books arrived on time and in excellent condition. I will recommend this site to my friends.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br/> <br/>
+
+<!-- 
+    Blogs Section:
+    Lists recent blog posts to engage users with book-related content and updates.
+-->
+<section class="blogs" id="blogs">
+    <h1 class="heading"> <span>our blogs</span> </h1>
+    <div class="blogs-list">
+        <!-- Each box contains a blog post preview with image, title, and summary -->
+        <div class="box">
+            <div class="image">
+                <img src="https://www.theblogstarter.com/wp-content/uploads/2014/02/4.jpg" width="400px" height="200px" alt="Blog Image banner">
+            </div>
+            <div class="content">
+                <h3>Top 5 Must-Read Books of 2024</h3>
+                <p>Discover the most anticipated releases of the year and why these books are making waves in the literary world.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://www.theblogstarter.com/wp-content/uploads/2014/02/4.jpg" width="400px" height="200px"  alt="Blog Image banner">
+            </div>
+            <div class="content">
+                <h3>Tips to Find Great Deals at Book Stores</h3>
+                <p>Learn tips and tricks for saving money on your next book purchase, both online and in-store.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="https://www.theblogstarter.com/wp-content/uploads/2014/02/4.jpg" width="400px" height="200px"  alt="Blog Image banner">
+            </div>
+            <div class="content">
+                <h3>Upcoming Book Store Promotions</h3>
+                <p>Stay updated on the latest discounts, special offers, and exclusive events happening at your favorite book stores.</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br/>
+<br/>
+
+<!-- 
+    Footer Section:
+    Provides site-wide information including locations, quick navigation links, contact info, social media, and credits.
+-->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>our locations</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Nigeria </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Germany </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> USA </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Ireland </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> japan </a>
+        </div>
+        <br/>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> arrivals </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> blogs </a>
+        </div>
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +234 8000000000 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +234 8020000000 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> chinonso@example.com </a>
+        </div>
+    </div>
+    <br/>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+    <br/>
+    <div class="credit"> created by <span>Idogwu Chinonso</span> | all rights reserved! </div>
+</section>
+</body>
+</html>
