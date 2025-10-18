@@ -1,6 +1,6 @@
-# IU-DLBCSWAD01 Task 3
+# IU-DLBCSWAD01 Task 3 and 5
 
-This repository contains the solution for Task 3 of the DLBCSWAD01 course. The project is a static HTML website for a sample online bookstore.
+This repository contains the solution for Task 3 & 5 of the DLBCSWAD01 course. These projects are static HTML websites for a sample online bookstore and a simple HTML site to update and delete book data from a JSON object.
 
 ## Cloning the Repository
 
