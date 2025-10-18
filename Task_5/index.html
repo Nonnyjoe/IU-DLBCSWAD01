@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List Manager</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        form { margin: 20px 0; }
+        input, button { margin: 5px; padding: 5px; }
+        #tableContainer { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Book List Manager</h1>
+    
+    <!-- Display Table -->
+    <div id="tableContainer"></div>
+    
+    <!-- Update Form -->
+    <h2>Update a Book</h2>
+    <form id="updateForm">
+        <label>Book Title to Update: <input type="text" id="updateTitle" required></label><br>
+        <label>New Author: <input type="text" id="newAuthor" required></label><br>
+        <label>New Year: <input type="number" id="newYear" required min="0"></label><br>
+        <label>New Genre: <input type="text" id="newGenre" required></label><br>
+        <button type="submit">Update Book</button>
+    </form>
+    
+    <!-- Remove Form -->
+    <h2>Remove a Book</h2>
+    <form id="removeForm">
+        <label>Book Title to Remove: <input type="text" id="removeTitle" required></label><br>
+        <button type="submit">Remove Book</button>
+    </form>
+
+    <script>
+        // Initial JSON-like data containing book details
+        let books = [{title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, genre: "Literary Fiction"},
+            {title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925, genre: "Jazz Age Novel"},
+            {title: "The Silent Ocean", author: "Jane Doe", year: 2023, genre: "Fiction"},
+            {title: "Learning Web Development", author: "John Smith", year: 2022, genre: "Technology"},
+            {title: "Design Patterns Explained", author: "Alan Lee", year: 2021, genre: "Computer Science"}];
+
+        // Function to display books in table
+        function displayBooks() {
+            const container = document.getElementById('tableContainer');
+            let tableHTML = '<table><thead><tr><th>Title</th><th>Author</th><th>Year</th><th>Genre</th></tr></thead><tbody>';
+            
+            books.forEach(book => {
+                tableHTML += `<tr>
+                    <td>${book.title}</td>
+                    <td>${book.author}</td>
+                    <td>${book.year}</td>
+                    <td>${book.genre}</td>
+                </tr>`;
+            });
+            
+            tableHTML += '</tbody></table>';
+            container.innerHTML = tableHTML;
+        }
+
+        // Function to serve as Validation helper
+        function validateBook(title, author, year, genre) {
+            if (!title || !author || !genre || title.trim() === '' || author.trim() === '' || genre.trim() === '') {
+                alert('Error: Title, author, and genre cannot be blank.');
+                return false;
+            }
+            if (isNaN(year) || year < 0) {
+                alert('Error: Year must be a valid positive number.');
+                return false;
+            }
+            return true;
+        }
+
+        // Snippet to update form handler on submit
+        document.getElementById('updateForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const updateTitle = document.getElementById('updateTitle').value.trim();
+            const newAuthor = document.getElementById('newAuthor').value.trim();
+            const newYear = parseInt(document.getElementById('newYear').value);
+            const newGenre = document.getElementById('newGenre').value.trim();
+            
+            if (!validateBook(updateTitle, newAuthor, newYear, newGenre)) return;
+            
+            const bookIndex = books.findIndex(book => book.title.toLowerCase() === updateTitle.toLowerCase());
+            if (bookIndex === -1) {
+                alert('Error: Book not found. Please check the title.');
+                return;
+            }
+            
+            books[bookIndex].author = newAuthor;
+            books[bookIndex].year = newYear;
+            books[bookIndex].genre = newGenre;
+            
+            displayBooks(); // Refresh table
+            this.reset(); // Clear form
+            alert('Book updated successfully!');
+        });
+
+        // Remove form handler
+        document.getElementById('removeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const removeTitle = document.getElementById('removeTitle').value.trim();
+            
+            if (!removeTitle) {
+                alert('Error: Title cannot be blank.');
+                return;
+            }
+            
+            const bookIndex = books.findIndex(book => book.title.toLowerCase() === removeTitle.toLowerCase());
+            if (bookIndex === -1) {
+                alert('Error: Book not found. Please check the title.');
+                return;
+            }
+            
+            books.splice(bookIndex, 1); // Remove from array
+            displayBooks(); // Refresh table
+            this.reset(); // Clear form
+            alert('Book removed successfully!');
+        });
+
+        // Initial display
+        displayBooks();
+    </script>
+</body>
+</html>
